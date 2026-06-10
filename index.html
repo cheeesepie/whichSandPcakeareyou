@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เค้ก S&P ชิ้นไหนที่ใช่คุณ!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Disclaimer top-right -->
+  <div class="disclaimer">
+    <span class="disclaimer-th">หมายเหตุ: เว็บไซต์นี้พัฒนาขึ้นสำหรับการแข่งขัน Crack The Cake by CTT</span>
+    <span class="disclaimer-en">This website was developed for the Crack The Cake by CTT competition.</span>
+  </div>
+
+  <!-- SCREEN 1: Landing -->
+  <section id="screen-landing" class="screen active">
+    <div class="landing-inner">
+      <img src="images/logo.svg" alt="S&P Logo" class="logo" />
+      <h1 class="tagline">เค้ก S&amp;P ชิ้นไหนที่ใช่คุณ!</h1>
+      <p class="sub-tagline">ตอบคำถาม 10 ข้อ แล้วค้นพบตัวตนของคุณ</p>
+      <button class="btn-start" id="btnStart">เริ่มทำแบบทดสอบ</button>
+    </div>
+    <div class="landing-deco deco-left"></div>
+    <div class="landing-deco deco-right"></div>
+  </section>
+
+  <!-- SCREEN 2: Quiz -->
+  <section id="screen-quiz" class="screen">
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <span class="quiz-label">คุณคือเค้ก S&amp;P ชิ้นไหนในสไตล์ที่เป็นคุณ?</span>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="progress-text" id="progressText">1 / 10</span>
+        </div>
+      </div>
+
+      <div class="question-area" id="questionArea">
+        <!-- Injected by JS -->
+      </div>
+
+      <div class="quiz-nav">
+        <button class="btn-back" id="btnBack">← ย้อนกลับ</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 3: Result -->
+  <section id="screen-result" class="screen">
+    <div class="result-container">
+      <p class="result-intro">ผลลัพธ์ของคุณคือ...</p>
+      <div class="result-card">
+        <div class="result-cake-wrap">
+          <img id="resultImage" src="" alt="Cake" class="result-cake-img" />
+        </div>
+        <div class="result-content">
+          <h2 class="result-cake-name" id="resultName"></h2>
+          <p class="result-definition" id="resultDefinition"></p>
+          <p class="result-desc" id="resultDesc"></p>
+        </div>
+      </div>
+      <div class="result-closing">
+        <p id="resultClosing"></p>
+      </div>
+      <button class="btn-retry" id="btnRetry">ทำแบบทดสอบใหม่</button>
+    </div>
+  </section>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
